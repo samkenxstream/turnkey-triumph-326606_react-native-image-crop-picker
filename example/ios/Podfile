@@ -7,6 +7,7 @@ target 'example' do
   config = use_native_modules!
 
   pod 'RNImageCropPicker', :path => '../node_modules/react-native-image-crop-picker'
+  pod 'TOCropViewController', :git => 'https://github.com/discord/TOCropViewController', :branch => 'feature/add-gif-cropping'
 
   use_react_native!(
     :path => config[:reactNativePath],
