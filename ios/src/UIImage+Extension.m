@@ -6,9 +6,9 @@
 //
 
 #import "UIImage+Extension.h"
-#import <UIImage+Animated.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import <TOImageFrame.h>
+#import <TOCropViewController/UIImage+Animated.h>
+#import <TOCropViewController/TOImageFrame.h>
 
 @implementation UIImage (fixOrientation)
 

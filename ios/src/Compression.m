@@ -7,8 +7,8 @@
 //
 
 #import "Compression.h"
-#import <TOImageFrame.h>
-#import <UIImage+Animated.h>
+#import <TOCropViewController/TOImageFrame.h>
+#import <TOCropViewController/UIImage+Animated.h>
 #import "UIImage+Extension.m"
 
 @implementation Compression

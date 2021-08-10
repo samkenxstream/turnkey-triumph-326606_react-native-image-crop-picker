@@ -8,7 +8,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 
 #import "ImageCropPicker.h"
-#import <UIImage+Animated.h>
+#import <TOCropViewController/UIImage+Animated.h>
 #import "UIImage+Extension.h"
 
 
