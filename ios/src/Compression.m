@@ -9,6 +9,7 @@
 #import "Compression.h"
 #import <TOCropViewController/TOImageFrame.h>
 #import <TOCropViewController/UIImage+Animated.h>
+#import "UIImage+Extension.h"
 
 @implementation Compression
 
