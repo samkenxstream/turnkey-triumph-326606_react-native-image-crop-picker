@@ -316,7 +316,7 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNImageCropPicker (from `../node_modules/react-native-image-crop-picker`)
-  - TOCropViewController (from `https://github.com/discord/TOCropViewController`, branch `feature/add-gif-cropping`)
+  - TOCropViewController (from `https://github.com/discord/TOCropViewController.git`, branch `discord`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -383,15 +383,15 @@ EXTERNAL SOURCES:
   RNImageCropPicker:
     :path: "../node_modules/react-native-image-crop-picker"
   TOCropViewController:
-    :branch: feature/add-gif-cropping
-    :git: https://github.com/discord/TOCropViewController
+    :branch: discord
+    :git: https://github.com/discord/TOCropViewController.git
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 CHECKOUT OPTIONS:
   TOCropViewController:
-    :commit: 7020cdeff0b0d25b898cca236d0b9451cbd7f98f
-    :git: https://github.com/discord/TOCropViewController
+    :commit: a55b439e95fec6797937df09fd728a07f662a210
+    :git: https://github.com/discord/TOCropViewController.git
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
@@ -427,6 +427,6 @@ SPEC CHECKSUMS:
   TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
 
-PODFILE CHECKSUM: fcf2dd7af25ff24a7c06e9428413f71c4abf6c61
+PODFILE CHECKSUM: 83ceb81c6487393153b05c4e7450503b8072aaf8
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.10.1

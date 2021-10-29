@@ -373,14 +373,12 @@ RCT_EXPORT_METHOD(openCropper:(NSDictionary *)options
     self.currentSelectionMode = CROPPING;
     
     NSString *path = [options objectForKey:@"path"];
-    NSLog(@"Got path %@", path);
     
     [NSURLConnection sendAsynchronousRequest:[RCTConvert NSURLRequest:path] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         if (error) {
             self.reject(ERROR_CROPPER_IMAGE_NOT_FOUND_KEY, ERROR_CROPPER_IMAGE_NOT_FOUND_MSG, nil);
         } else {
             UIImage* image = [UIImage animatedImageFromData:data];
-            //TODO fix orientation
             [self cropImage:image];
         }
     }];
