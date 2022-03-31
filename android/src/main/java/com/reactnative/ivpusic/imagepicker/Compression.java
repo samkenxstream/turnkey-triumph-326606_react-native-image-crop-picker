@@ -27,7 +27,7 @@ import java.util.UUID;
 
 class Compression {
 
-    File resize(Context context, String originalImagePath, int maxWidth, int maxHeight, int quality, String mimeType) throws IOException {
+    File resize(Context context, String originalImagePath, int maxWidth, int maxHeight, int quality) throws IOException {
         Bitmap original = BitmapFactory.decodeFile(originalImagePath);
 
         int width = original.getWidth();
@@ -63,21 +63,10 @@ class Compression {
             imageDirectory.mkdirs();
         }
 
-        final Bitmap.CompressFormat compressFormat =
-                MimeTypeUtils.getBitmapCompressFormat(mimeType);
-        final String resizeImageFileExtension;
-        if (compressFormat == Bitmap.CompressFormat.PNG) {
-            resizeImageFileExtension = ".png";
-        } else {
-            resizeImageFileExtension = ".jpg";
-        }
+        File resizeImageFile = new File(imageDirectory, UUID.randomUUID() + ".jpg");
 
-        File resizeImageFile = new File(
-                imageDirectory,
-                UUID.randomUUID() + resizeImageFileExtension
-        );
         OutputStream os = new BufferedOutputStream(new FileOutputStream(resizeImageFile));
-        resized.compress(MimeTypeUtils.getBitmapCompressFormat(mimeType), quality, os);
+        resized.compress(Bitmap.CompressFormat.JPEG, quality, os);
 
         os.close();
         original.recycle();
@@ -134,7 +123,7 @@ class Compression {
             maxHeight = Math.min(maxHeight, bitmapOptions.outHeight);
         }
 
-        return resize(context, originalImagePath, maxWidth, maxHeight, targetQuality, bitmapOptions.outMimeType);
+        return resize(context, originalImagePath, maxWidth, maxHeight, targetQuality);
     }
 
     synchronized void compressVideo(final Activity activity, final ReadableMap options, final String originalVideo, final String compressedVideo, final Promise promise) {
